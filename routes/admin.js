@@ -81,13 +81,81 @@ router.get('/news', (req, res)=> {
 router.get('/news/:cate_id', (req, res)=> {
     res.sendFile(path.resolve('./www/views/admin/admin_news.html'));
 });
-/*--------------产品页面-------------*/
-router.get('/product', (req, res)=> {
+/*-------------------------------------------产品页面-------------------------------------------------*/
+router.get('/product', (req, res) => {
     res.sendFile(path.resolve('./www/views/admin/admin_product.html'));
 });
-router.get('/product/:cate_id', (req, res)=> {
+/*.............获取相应类别 页面.............*/
+router.get('/product/:cate_id', (req, res) => {
     res.sendFile(path.resolve('./www/views/admin/admin_product.html'));
 });
+/*..............获取页面数据..................*/
+router.post("/product/:cate_id", (req, res) => {
+    mysql.query("select * from product_detail where cate_id=?", [req.params.cate_id], (err, data) => {
+        res.json(data)
+    })
+});
+
+/*增加页面*/
+router.post("/product_add/:id", (req, res) => {
+    mysql.query("INSERT INTO product_detail (thumb,cate_id) VALUES (?,?)", ["upload.png",req.params.id], (err, data) => {
+        if (!err) {
+            res.json(data.insertId);
+        }
+    })
+});
+
+/*.............删除页面....*/
+router.post("/product/:cate_id/:id", (req, res) => {
+    mysql.query("DELETE FROM product_detail WHERE id=?", [req.params.id], (err, data) => {
+        if (!err) {
+            res.json("ok");
+        }
+    })
+});
+
+/*........更改........*/
+router.post('/product_update', (req, res) => {
+    mysql.query(`update product_detail set ${req.body.index}=? where id=?`, [req.body.value, req.body.id], (err, data) => {
+        if (!err) {
+            res.json('ok');
+        } else {
+            res.json('wrong');
+        }
+    })
+});
+/*更改图片*/
+router.post("/product_thumb",upload.single("file"),function(req,res){
+    async.series([
+        function(callback){
+            fs.createReadStream(req.file.path).pipe(fs.createWriteStream(path.resolve("./www/public/images/",req.file.originalname)));
+            callback(null)
+        },
+        function(callback){
+            fs.unlink(path.resolve(req.file.path));
+            callback(null)
+        }
+    ],function(){
+        mysql.query("update product_detail set thumb=? where id=?",[req.file.originalname,req.body.id],(err,data)=>{
+            if(!err){
+                res.json("ok")
+            }else{
+                res.json("wrong")
+            }
+        })
+    })
+});
+
+/*文章的编辑*/
+router.post("/product_editor",(req,res)=>{
+    mysql.query("update product_detail set detail=? where id=?",[req.body.detail,req.body.id],(err,data)=>{
+        if(!err){
+            res.json("ok")
+        }else{
+            res.json("wrong")
+        }
+    })
+})
 /*------------餐饮美食页面-------------*/
 router.get('/food', (req, res)=> {
     res.sendFile(path.resolve('./www/views/admin/admin_food.html'));
@@ -223,16 +291,22 @@ router.post('/chVideo', (req, res)=> {
 });
 
 /*--------------文章详情编辑页面---------------*/
-router.get('/detail', (req, res)=> {
+router.get('/detail', (req, res) => {
     res.sendFile(path.resolve('./www/views/admin/admin_detail.html'));
 });
-router.get('/detail/:cate', (req, res)=> {
+router.get('/detail/:cate', (req, res) => {
     res.sendFile(path.resolve('./www/views/admin/admin_detail.html'));
 });
-router.get('/detail/:cate/:cate_id', (req, res)=> {
+router.get('/detail/:cate/:cate_id/:essay_id', (req, res) => {
     res.sendFile(path.resolve('./www/views/admin/admin_detail.html'));
 });
-
+/*--------------富文本编辑器获取内容---------------*/
+router.post('/getEditorContent', function (req, res) {
+    var sql=`select detail from ${req.body.cate+"_detail"} where id=?`
+    mysql.query(sql,[req.body.id],function (err,data) {
+        res.json(data[0].detail);
+    })
+});
 /*--------------富文本编辑器上传图片---------------*/
 //富文本编辑器上传图片
 router.post('/editorImg', upload.single('wangEditorH5File'), function (req, res) {

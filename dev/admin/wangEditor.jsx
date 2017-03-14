@@ -1,10 +1,35 @@
 const React = require('react');
 class WangEditor extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props);
+        this.state={
+            content:"Loading..."
+        }
     }
-
-    componentDidMount() {
+    componentDidMount(){
+        const that=this;
+        var arr=location.pathname.split("/")
+        var data={
+            cate:arr[3],
+            id:arr[5]
+        }
+        fetch("/admin/getEditorContent",{
+            method: 'post',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        }).then((res) => res.json()).then((data) => {
+            console.log(data);
+            that.setState({
+                content: data
+            })
+            if(this.state.content!=="Loading..."){
+                // 初始化内容
+                this.editor.$txt.html(this.state.content);
+            }
+        });
         this.editor = new window.wangEditor(this.e);
         this.editor.config.uploadImgUrl = this.props.url;
         this.editor.config.menus=$.map(wangEditor.config.menus,function (item,key) {
@@ -14,10 +39,8 @@ class WangEditor extends React.Component {
             return item;
         })
         this.editor.create();
-        if(this.props.content){
-            // 初始化内容
-            this.editor.$txt.html(this.props.content);
-        }
+
+        console.log(this.state.content);
     }
 
 
