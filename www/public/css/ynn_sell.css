@@ -1,0 +1,137 @@
+.ynn_all {
+  width: 1200px;
+  height: 590px;
+  margin: auto;
+}
+
+.ynn_all .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.ynn_all .left .ynn_cont {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.ynn_all .left .ynn_cont li {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ynn_all .left .ynn_cont li.active {
+  opacity: 1;
+}
+
+.ynn_all .left .ynn_title {
+  width: 100%;
+  height: 150px;
+}
+
+.ynn_all .left .ynn_title li {
+  width: 190px;
+  height: 100%;
+  border: 1px solid #eee;
+  float: left;
+  margin-right: 15px;
+}
+
+.ynn_all .left .ynn_title li:nth-child(3) {
+  margin-right: 0;
+}
+
+.ynn_all .left .ynn_title li.active {
+  border: 2px solid #a40000;
+}
+
+.ynn_all .right {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-top: 70px;
+  padding-left: 60px;
+}
+
+.ynn_all .right .ynn_show {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.ynn_all .right .ynn_show h1 {
+  display: inline-block;
+  font-size: 27px;
+  border-bottom: 2px solid #a40000;
+}
+
+.ynn_all .right .ynn_show .ynn_showe {
+  font-size: 14px;
+}
+
+.ynn_all .right .ynn_character {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.ynn_all .right .ynn_character li {
+  float: left;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
+.ynn_all .right .ynn_character li span {
+  float: right;
+  width: 2px;
+  height: 25px;
+  background: #a40000;
+  margin: 0 12px;
+}
+
+.ynn_all .right .ynn_character li:last-child span {
+  width: 0;
+}
+
+.ynn_all .right .ynn_del {
+  text-decoration: line-through;
+  color: #969696;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.ynn_all .right .ynn_del span {
+  margin-left: 18px;
+}
+
+.ynn_all .right .ynn_now {
+  font-size: 24px;
+  color: #a40000;
+  margin-bottom: 148px;
+}
+
+.ynn_all .right .ynn_now span {
+  font-size: 30px;
+  margin-left: 32px;
+}
+
+.ynn_all .right .ynn_buy {
+  display: block;
+  width: 300px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 28px;
+  background: #a40000;
+  border-radius: 30px;
+}
+
+.ynn_all .right .ynn_buy:hover {
+  background: #7b0000;
+}

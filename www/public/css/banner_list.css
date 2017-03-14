@@ -1,0 +1,19 @@
+#banner {
+    width: 100%;
+    height: 450px;
+    background-color: #e2e2e2; }
+#banner .top_banner {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto; }
+#banner .top_banner img {
+    width:100%;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}

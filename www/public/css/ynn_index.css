@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ynn_footer_contain {
+  width: 100%;
+}
+
+.ynn_footer_contain .ynn_footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 68px;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list .ynn_listli {
+  width: 33.33%;
+  height: 100%;
+  float: left;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list .ynn_listli img {
+  width: 42px;
+  height: 42px;
+  float: left;
+  margin-left: 19px;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list .ynn_listli .ynn_word {
+  width: 70%;
+  height: 100%;
+  float: left;
+  margin-left: 20px;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list .ynn_listli .ynn_word h4 {
+  font-size: 14px;
+}
+
+.ynn_footer_contain .ynn_footer .ynn_list .ynn_listli .ynn_word .ynn_content {
+  font-size: 14px;
+}
+
+.ynn_footer_contain .ynn_copyright {
+  width: 100%;
+  height: 70px;
+  background: #000;
+  color: #969696;
+  font-size: 14px;
+  text-align: center;
+  line-height: 70px;
+}

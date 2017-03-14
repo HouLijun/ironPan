@@ -1,0 +1,56 @@
+const express=require('express');
+const router=express.Router();
+const path=require('path');
+/*----------首页-----------*/
+router.get('/',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/index.html'));
+});
+/*-------------新闻页面-----------*/
+router.get('/news',(req,res)=>{
+    res.redirect("/news/1");
+});
+router.get('/news/:cate_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/list_news.html'));
+});
+router.get('/news/:cate_id/:detail_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/show.html'));
+});
+/*--------------产品页面-------------*/
+router.get('/product',(req,res)=>{
+    res.redirect("/product/1");
+});
+router.get('/product/:cate_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/list_product.html'));
+});
+router.get('/product/:cate_id/:detail_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/show_product.html'));
+});
+/*------------餐饮美食页面-------------*/
+router.get('/food',(req,res)=>{
+    res.redirect("/food/1")
+});
+router.get('/food/:cate_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/list_food.html'));
+});
+router.get('/food/:cate_id/:detail_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/show.html'));
+});
+/*--------------保养页面---------------*/
+router.get('/upkeep',(req,res)=>{
+    res.redirect("/upkeep/1")
+});
+router.get('/upkeep/:cate_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/list_upkeep.html'));
+});
+router.get('/upkeep/:cate_id/:detail_id',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/show.html'));
+});
+/*--------------关于我们---------------*/
+router.get('/about',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/aboutUs.html'));
+});
+/*--------------联系我们---------------*/
+router.get('/contact',(req,res)=>{
+    res.sendFile(path.resolve('./www/views/index/contactUs.html'));
+});
+module.exports=router;

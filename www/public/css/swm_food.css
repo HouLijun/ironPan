@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url(public.css);
+.swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.swm_food_box {
+  width: 100%;
+  height: 1112px;
+  background-color: #eee;
+  padding-top: 90px; }
+  .swm_food_box .swm_food {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; }
+    .swm_food_box .swm_food .swm_food_title {
+      width: 386px;
+      height: 113px;
+      display: table;
+      margin: auto; }
+      .swm_food_box .swm_food .swm_food_title img {
+        width: 100%;
+        height: 100%; }
+    .swm_food_box .swm_food .swm_more {
+      padding-top: 106px;
+      width: 100%;
+      height: auto; }
+      .swm_food_box .swm_food .swm_more #swm_more {
+        width: 125px;
+        height: 48px;
+        display: table;
+        margin: auto;
+        font-size: 18px;
+        color: #a02024;
+        font-family: 'SanFranciscoDisplay-Bold';
+        border-radius: 24px;
+        border: 1px solid #a02024;
+        text-align: center;
+        line-height: 48px; }
+        .swm_food_box .swm_food .swm_more #swm_more:hover {
+          background: #a02024;
+          color: #fff; }
+    .swm_food_box .swm_food .swm_food_con {
+      width: 1200px;
+      height: auto;
+      overflow: hidden;
+      padding-top: 18px;
+      margin-top: 132px; }
+      .swm_food_box .swm_food .swm_food_con .swm_food_conLi {
+        width: 362px;
+        height: 522px;
+        float: left;
+        border: 6px solid transparent;
+        position: relative;
+        transition: border .8s ease; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi img {
+          width: 100%;
+          height: 100%; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_text {
+          width: 300px;
+          height: auto;
+          bottom: 16px;
+          background: url("/public/images/swm_gray_bg.png") no-repeat center center;
+          background-size: cover;
+          transition: transform .8s ease;
+          transform: translate3d(0, 200%, 0); }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_text h3 {
+          width: 100%;
+          height: 37px;
+          font-size: 18px;
+          color: #000;
+          font-family: '微软雅黑';
+          font-weight: bold;
+          text-align: center;
+          line-height: 41px; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_text .swm_food_textLine {
+          width: 96px;
+          height: 10px;
+          display: table;
+          margin: auto;
+          background: url("/public/images/swm_line.png") no-repeat center center;
+          background-size: cover; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_text .swm_food_textDes {
+          padding: 20px 22px 16px;
+          width: 100%;
+          height: auto;
+          font-size: 14px;
+          color: #000;
+          font-family: '微软雅黑';
+          text-align: center;
+          line-height: 1.5em; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_deco {
+          width: 100%;
+          height: 62px;
+          position: absolute;
+          left: 0;
+          top: -18px;
+          transition: transform .8s ease;
+          transform: translate3d(0, -100px, 0); }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_deco .swm_food_decoLeft {
+          width: 28px;
+          height: 62px;
+          float: left;
+          margin-left: 32px;
+          background: url("/public/images/swm_dec.png") no-repeat center center;
+          background-size: cover; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi .swm_food_deco .swm_food_decoRight {
+          width: 28px;
+          height: 62px;
+          float: right;
+          margin-right: 32px;
+          background: url("/public/images/swm_dec.png") no-repeat center center;
+          background-size: cover; }
+      .swm_food_box .swm_food .swm_food_con .swm_food_conLi:nth-child(3) {
+        float: right; }
+      .swm_food_box .swm_food .swm_food_con .swm_food_conLi:nth-child(2) {
+        float: left;
+        margin: 0 57px; }
+      .swm_food_box .swm_food .swm_food_con .swm_food_conLi:hover {
+        border-color: #a02024; }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi:hover .swm_food_deco {
+          transform: translate3d(0, 0, 0); }
+        .swm_food_box .swm_food .swm_food_con .swm_food_conLi:hover .swm_food_text {
+          transform: translate3d(0, 0, 0); }

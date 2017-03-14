@@ -1,0 +1,105 @@
+.ynn_all2 {
+  width: 1200px;
+  height: 860px;
+  margin: 0 auto;
+  padding-top: 130px;
+}
+
+.ynn_all2 .ynn_title {
+  width: 100%;
+  height: 82px;
+  position: relative;
+}
+
+.ynn_all2 .ynn_title img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ynn_all2 .ynn_content {
+  width: 100%;
+  height: 652px;
+  padding-top: 105px;
+}
+
+.ynn_all2 .ynn_content ul {
+  width: 100%;
+  height: 100%;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli {
+  width: 33.33%;
+  height: 502px;
+  float: left;
+  padding-top: 42px;
+  position: relative;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall {
+  display: none;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall .ynn_cover {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall .ynn_title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall .ynn_cont {
+  font-size: 14px;
+  padding: 0 18px 0 40px;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall .ynn_cont pre {
+  line-height: 1.6em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall a {
+  display: block;
+  width: 125px;
+  height: 48px;
+  border: 1px solid #a02024;
+  border-radius: 24px;
+  color: #a02024;
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
+  position: absolute;
+  top: 417px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli .ynn_coverall a:hover {
+  background: #a02024;
+  color: #fff;
+}
+
+.ynn_all2 .ynn_content ul li.ynn_titleli:hover .ynn_coverall {
+  display: block;
+}

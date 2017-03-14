@@ -1,0 +1,198 @@
+.Lx_tale{
+    width: 100%;
+    height: 1364px;
+    background: #f8f8f8;
+}
+.Lx_tale .lx_iron_box{
+    width: 1200px;
+    margin: 0 auto ;
+    padding-top: 150px;
+    height: 1200px;
+}
+.Lx_tale .lx_iron_box .lx_iron_title img{
+    width: 191px;
+    height:35px;
+    display:block;
+    margin: 0px auto ;
+}
+.Lx_tale .lx_iron_box p{
+    text-align: center;
+    color: #a0a0a0;
+    font-family: 'pingfang';
+    line-height: 2em;
+}
+.Lx_tale .lx_iron_box .Lx_adorn{
+    width: 100%;
+    height: 13px;
+    background: url("../images/zztfgx.png") center no-repeat;
+    margin-top: 2px;
+}
+.Lx_tale .lx_iron_box .lx_iron_show{
+    width: 100%;
+    height: 595px;
+    margin-top: 68px;
+    position: relative;
+}
+.Lx_tale .lx_iron_box .lx_iron_show .lx_iron_btn .lx_iron_next,.lx_iron_prev{
+    width: 54px;
+    height: 74px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+}
+.Lx_tale .lx_iron_box .lx_iron_show .lx_iron_btn .lx_iron_prev{
+    background: url("../images/lx_iron_prev_03.png");
+    left: 0;
+}
+.Lx_tale .lx_iron_box .lx_iron_show .lx_iron_btn .lx_iron_next{
+    background: url("../images/lx_iron_next_05.png");
+    right: 0;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul{
+    width: 100%;
+    height: 100%;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(1){
+    float: left;
+    width: 380px;
+    height: 100%;
+    padding: 68px 0;
+    background: #ffffff;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(3){
+    float: right;
+    width: 380px;
+    height: 100%;
+    padding: 68px 0;
+    background: #fff;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(2){
+    background: #ffffff;
+    float: left;
+    width: 389px;
+    height: 100%;
+    margin: 0 24px;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(1) div{
+    padding-top: 100px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(1) div img{
+    display: inline-block;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(3) div img{
+    display: inline-block;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(3) div{
+    padding-top: 100px;
+    width: 380px;
+    overflow: hidden;
+    text-align: center;
+}
+.Lx_tale .lx_iron_box .lx_iron_show ul li:nth-child(2) .lx_icon_l{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.lx_icon_l_top{
+    width: 100%;
+    min-height: 330px;
+}
+.lx_icon_l_bottom{
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    text-align: center;
+}
+.lx_icon_l_bottom img{
+    display: inline-block;
+}
+.lx_icon_l .lx_iron_shade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.1;
+}
+.lx_intro_chinese {
+    position: absolute;
+    top: 100px;
+    right: 165px;
+    width: 28px;
+    min-height: 50px;
+    font-size: 32px;
+    font-family: '方正清刻本悦宋简体';
+    color: #a02024;  }
+.lx_intro_english {
+    min-height: 150px;
+    position: absolute;
+    top: 68px;
+    right: 100px;
+    color: #2a2a2a;
+    font-family: 'Droid Sans Georgian';
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    /* Internet Explorer 9*/
+    -moz-transform: rotate(90deg);
+    /* Firefox */
+    -webkit-transform: rotate(90deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(90deg); }
+
+
+
+
+
+.lx_intro_namebox {
+    position: absolute;
+    top: 53px;
+    right: 61px;
+    width: 40px;
+    min-height: 50px; }
+.lx_intro_namebox .lx_intro_name {
+    font-size: 32px;
+    font-family: '方正清刻本悦宋简体';
+    width: 20px;
+    min-height: 20px;
+    color: #2a2a2a;}
+.lx_intro_namebox .lx_intro_logo {
+    margin-top: 8px;
+    width: 100%;
+    height: 16px; }
+.lx_intro_namebox .lx_intro_logo img {
+    margin-right: -15px;
+    float: right;
+    width: 20px;
+    height: 20px; }
+.Lx_brand_tale{
+    width: 100%;
+    height: 240px;
+    margin-top: 100px;
+}
+.Lx_brand_tale h1{
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: inherit;
+}
+.Lx_brand_tale h3{
+    font-weight: lighter;
+    color: #a0a0a0;
+    text-align: center;
+    line-height: 2em;
+    font-size: 18px;
+}
+.Lx_brand_tale p{
+    text-align: center;
+    line-height: 2em;
+    color: #6f6f6f;
+    font-size: 18px;
+}

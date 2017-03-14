@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import url(public.css);
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductLineLeft, .swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductLineRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductSale {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.swm_newProductBox {
+  width: 100%;
+  height: auto;
+  background-color: #eee;
+  margin-top: 40px;
+}
+
+.swm_newProductBox .swm_newProduct {
+  width: 1200px;
+  height: auto;
+  margin: auto;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductTitle {
+  padding: 42px 0;
+  width: 100%;
+  height: 168px;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductTitle img {
+  width: auto;
+  height: auto;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon {
+  width: 1200px;
+  height: 285px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li {
+  width: 292px;
+  height: 285px;
+  display: inline-block;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg {
+  position: relative;
+  width: 292px;
+  height: 182px;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg img {
+  width: 292px;
+  height: 100%;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(160, 32, 36, 0.8);
+  transform: scale(0, 0);
+  transition: transform 1s ease;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox {
+  width: 90px;
+  height: auto;
+  padding: 12px 10px;
+  border: 1px solid #fff;
+  display: table;
+  margin: 50px auto;
+  position: relative;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductLineLeft {
+  width: 10px;
+  height: 1px;
+  left: -6px;
+  background: #fff;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductLineRight {
+  width: 10px;
+  height: 1px;
+  right: -6px;
+  background: #fff;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductSale {
+  width: 100%;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductSale span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 18px;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductContext1 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg .swm_newProductActive .swm_newProductLineBox .swm_newProductContext2 {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductImg:hover .swm_newProductActive {
+  transform: scale(1, 1);
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductName {
+  width: auto;
+  height: 16px;
+  margin-top: 18px;
+  font-size: 16px;
+  font-family: '微软雅黑';
+  color: #2a2a2a;
+}
+
+.swm_newProductBox .swm_newProduct .swm_newProductCon li .swm_newProductEnglish {
+  width: auto;
+  height: 26px;
+  font-size: 16px;
+  font-family: 'SanFranciscoDisplay-Regular';
+  color: #939393;
+  line-height: 26px;
+}
+
+/*# sourceMappingURL=index1.css.map */

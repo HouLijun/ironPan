@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'SanFranciscoDisplay-Regular';
+  src: url('/public/fonts/SanFranciscoDisplay-Regular.TTF'); }
+@font-face {
+  font-family: 'SanFranciscoDisplay-Bold';
+  src: url('../fonts/SanFranciscoDisplay-Bold.TTF'); }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family:"微软雅黑","Microsoft","SanFranciscoDisplay-Regular","Helvetica Neue",sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none; }
+
+img {
+  border: 0; }

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.zq_paging_box {
+  width: 856px;
+  height: 46px; }
+
+.zq_page_minbox {
+  justify-content: center;
+  /*子元素水平居中*/
+  align-items: center;
+  /*子元素垂直居中*/
+  display: -webkit-flex; }
+
+/*第一页 最后一页 椭圆框*/
+.zq_page_oval {
+  width: 94px;
+  height: 100%;
+  border: 1px solid #a02024;
+  border-radius: 23px;
+  float: left;
+  margin: 0 7px;
+  cursor: pointer; }
+  .zq_page_oval:hover .zq_page_minoval {
+    background: #a02024;
+    color: #fff; }
+
+/*内嵌 椭圆*/
+.zq_page_minoval {
+  width: 86px;
+  height: 36px;
+  background: #fff;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 36px;
+  margin: 4px auto;
+  font-size: 16px;
+  color: #a02024; }
+
+.zq_page_first {
+  margin-left: 0; }
+
+/*上一页 下一页 圆框*/
+.zq_page_circle {
+  float: left;
+  margin: 0 7px;
+  width: 46px;
+  height: 100%;
+  border: 1px solid #a02024;
+  border-radius: 50%;
+  cursor: pointer; }
+  .zq_page_circle:hover .zq_page_mincircle {
+    background: #a02024;
+    color: #fff; }
+
+.zq_page_circle.active .zq_page_mincircle {
+  background: #a02024;
+  color: #fff; }
+
+.zq_page_mincircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 4px auto;
+  text-align: center;
+  line-height: 36px;
+  color: #a02024;
+  font-size: 16px; }
+
+/*页数*/
+.zq_page_page {
+  float: left;
+  width: 300px;
+  height: 100%; }
+
+.zq_page_hidden {
+  float: left;
+  margin: 0 7px;
+  width: 46px;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 46px;
+  font-size: 18px;
+  color: #a02024; }
+
+/*搜索 跳转*/
+.zq_page_search {
+  width: 160px;
+  height: 100%;
+  float: left;
+  margin: 0 7px; }
+
+.zq_page_inputbox {
+  width: 94px;
+  height: 100%;
+  border: 1px solid #a02024;
+  border-radius: 23px;
+  float: left; }
+
+.zq_page_input {
+  width: 60px;
+  height: 20px;
+  margin: 13px 17px;
+  border: 0;
+  outline: none;
+  text-align: center;
+  color: #a02024; }
+
+.zq_page_span {
+  float: left;
+  display: block;
+  width: 33px;
+  height: 100%;
+  color: #000;
+  text-align: center;
+  line-height: 46px;
+  font-size: 16px; }
+
+/*go*/
+.zq_page_go {
+  margin-right: 0; }

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url(public.css);
+.swm_ingenuity {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.swm_ingenuity .swm_title {
+  width: auto;
+  height: 175px;
+  display: table;
+  margin: auto;
+}
+
+.swm_ingenuity .swm_title .swm_chineseTitle {
+  width: auto;
+  height: 32px;
+  font-size: 32px;
+  font-family: '微软雅黑';
+  color: #000;
+  text-align: center;
+}
+
+.swm_ingenuity .swm_title .swm_englishTitle {
+  width: auto;
+  height: 48px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 48px;
+  font-family: 'SanFranciscoDisplay-Regular';
+  color: #8b8b8b;
+}
+
+.swm_ingenuity .swm_title .swm_decoration {
+  width: 63px;
+  height: 11px;
+  display: table;
+  margin: auto;
+}
+
+.swm_ingenuity .swm_title .swm_decoration li {
+  float: left;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #a84200;
+}
+
+.swm_ingenuity .swm_content {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swm_ingenuity .swm_content .swm_item {
+  width: 340px;
+  height: 462px;
+  padding: 25px 17px;
+  border: 2px solid #fff;
+}
+
+.swm_ingenuity .swm_content .swm_item:hover {
+  border: 2px solid #a02024;
+}
+
+.swm_ingenuity .swm_content .swm_item:nth-child(1) {
+  float: left;
+}
+
+.swm_ingenuity .swm_content .swm_item:nth-child(2) {
+  float: left;
+  margin: 0 90px;
+}
+
+.swm_ingenuity .swm_content .swm_item:nth-child(3) {
+  float: right;
+}
+
+.swm_ingenuity .swm_content .swm_item .swm_pic {
+  width: 300px;
+  height: 300px;
+}
+
+.swm_ingenuity .swm_content .swm_item .swm_pic img {
+  width: 300px;
+  height: 300px;
+}
+
+.swm_ingenuity .swm_content .swm_item .swm_name {
+  width: auto;
+  height: auto;
+  margin-top: 36px;
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+}
+
+.swm_ingenuity .swm_content .swm_item .swm_price {
+  margin-top: 25px;
+  width: auto;
+  height: auto;
+  font-size: 26px;
+  color: #a02024;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index1.css.map */

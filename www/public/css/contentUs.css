@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("/public/fonts/iconfont.woff"); }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.container:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both; }
+
+.crumbs {
+  padding: 12px 0;
+  margin-top: 24px;
+  margin-bottom: 50px; }
+  .crumbs li {
+    display: inline-block;
+    color: #bbb;
+    font-size: 14px;
+    line-height: 14px;
+    transition: color .5s ease; }
+    .crumbs li .icon_crumbs {
+      font-family: "iconfont";
+      margin-right: 2px; }
+    .crumbs li .arrow {
+      font-family: "iconfont";
+      padding: 0 1px; }
+    .crumbs li a {
+      color: inherit; }
+  .crumbs li.current, .crumbs li:hover {
+    color: #2a2a2a; }
+
+.contentUs .title {
+  text-align: center; }
+
+.contentUs .information {
+  margin: 65px 0;
+  overflow: hidden; }
+  .contentUs .information li {
+    width: 25%;
+    height: 240px;
+    padding: 0 20px;
+    float: left; }
+  .contentUs .information li:nth-child(1) div {
+    background-color: #f9e0e0; }
+  .contentUs .information li:nth-child(2) div {
+    background-color: #ddf2f4; }
+  .contentUs .information li:nth-child(3) div {
+    background-color: #ebf3da; }
+  .contentUs .information li:nth-child(4) div {
+    background-color: #d5ecf9; }
+
+.contentUs .information li div {
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  background-color: red; }
+  .contentUs .information li div p.icon {
+    text-align: center;
+    height: 60px; }
+    .contentUs .information li div p.icon img {
+      line-height: 60px; }
+  .contentUs .information li div h5, .contentUs .information li div h6 {
+    text-align: center;
+    font-size: 14px; }
+  .contentUs .information li div h5 {
+    color: #000;
+    font-weight: bold;
+    padding: 20px 0; }
+  .contentUs .information li div h6 {
+    color: #6c6c6c; }
+
+.traffic {
+  margin-top: 135px;
+  margin-bottom: 50px; }
+  .traffic .title {
+    text-align: center; }
+  .traffic ul {
+    overflow: hidden; }
+    .traffic ul li {
+      width: 33.3333%;
+      float: left;
+      padding: 65px 100px 0; }
+      .traffic ul li p, .traffic ul li h4, .traffic ul li h6 {
+        text-align: center; }
+      .traffic ul li h4 {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 0;
+        margin-top: 10px; }
+      .traffic ul li h6 {
+        font-size: 14px;
+        padding: 5px 0; }
+
+/*# sourceMappingURL=contentUs.css.map */

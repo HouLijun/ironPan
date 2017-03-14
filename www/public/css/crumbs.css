@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "iconfont";
+    src: url("/public/fonts/iconfont.woff"); }
+.crumbs {
+    padding: 12px 0;
+    margin-top: 24px;
+    margin-bottom: 50px; }
+.crumbs li {
+    display: inline-block;
+    color: #bbb;
+    font-size: 14px;
+    line-height: 14px;
+    transition: color .5s ease; }
+.crumbs li .icon_crumbs {
+    font-family: "iconfont";
+    margin-right: 2px; }
+.crumbs li .arrow {
+    font-family: "iconfont";
+    padding: 0 1px; }
+.crumbs li a {
+    color: inherit; }
+.crumbs li.current, .crumbs li:hover {
+    color: #2a2a2a; }

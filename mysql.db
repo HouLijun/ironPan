@@ -1,0 +1,174 @@
+CREATE DATABASE ironPan;
+
+--后台管理
+DROP TABLE IF EXISTS admin_user;
+CREATE TABLE admin_user
+(
+  id INT(12) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  account VARCHAR (255) NOT NULL,
+  password VARCHAR (255) NOT NULL,
+  hash VARCHAR (255) NOT NULL,
+  pw VARCHAR (255) NOT NULL
+)DEFAULT CHARSET=utf8;
+INSERT INTO admin_user (account, password,hash) VALUES ('admin','e10adc3949ba59abbe56e057f20f883e','88468d8478342c7b664e011062129a10',123456);
+
+--banner
+DROP TABLE IF EXISTS banner;
+CREATE TABLE banner
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  url     VARCHAR(255) NOT NULL,
+  color     VARCHAR(255) NOT NULL,
+  position    INT(12)      NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO banner (id, url, position,color) VALUES
+(1,'/public/images/banner1.png',0,'#eee'),
+(2,'/public/images/banner2.png',1,'#eee'),
+(3,'/public/images/banner3.png',0,'#eee');
+
+--新闻分类
+DROP TABLE IF EXISTS news_cate;
+CREATE TABLE news_cate
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  cName      VARCHAR(255) NOT NULL,
+  eName      VARCHAR(255) NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO news_cate (id, cName, eName) VALUES
+(1,'媒体报道','Media reports'),
+(2,'专家观点','Expert opinion'),
+(3,'美食活动','Gourmet activity'),
+(4,'你问我答','Latest content');
+
+--新闻列表或详情
+DROP TABLE IF EXISTS news_detail;
+CREATE TABLE news_detail
+(
+  id  INT(12) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  sources VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  insertTime DATETIME(6) NOT NULL,
+  detail LONGTEXT NOT NULL,
+  thumb  VARCHAR(255) NOT NULL,
+  cate_id  INT(12) NOT NULL,
+  FOREIGN KEY (cate_id) REFERENCES news_cate(id)
+)DEFAULT CHARSET = utf8;
+INSERT INTO news_detail (id, title, sources, author, insertTime, detail, thumb, cate_id) VALUES
+(1,'炒菜用铁锅最安全','网络征集','张萌','2017.3.5','用铁锅做饭，会补充人类身体必不可少的铁元素。','1.png','1'),
+(2,'安全可靠','网络征集','李彤','2017.3.5','铁锅不会出现因为高温而爆裂的情况，对人身安全带来极大的保证。','1.png','2');
+
+
+--锅具保养分类
+DROP TABLE IF EXISTS upkeep_cate;
+CREATE TABLE upkeep_cate
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  cName      VARCHAR(255) NOT NULL,
+  eName      VARCHAR(255) NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO upkeep_cate (id, cName, eName) VALUES
+(1,'锅具特点','Pan characteristic'),
+(2,'如何除锈','How to bring'),
+(3,'如何开锅','How to clear'),
+(4,'如何防锈','How to rust'),
+(5,'注意事项','Announcements');
+
+
+--锅具保养详情
+DROP TABLE IF EXISTS upkeep_detail;
+CREATE TABLE upkeep_detail
+(
+  id  INT(12) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  sources VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  insertTime DATETIME(6) NOT NULL,
+  detail LONGTEXT NOT NULL,
+  thumb  VARCHAR(255) NOT NULL,
+  cate_id  INT(12) NOT NULL,
+  FOREIGN KEY (cate_id) REFERENCES upkeep_cate(id)
+)DEFAULT CHARSET = utf8;
+INSERT INTO upkeep_detail (id, title, sources, author, insertTime, detail, thumb, cate_id) VALUES
+(1,'炒菜用铁锅最安全','网络征集','张萌','2017.3.5','用铁锅做饭，会补充人类身体必不可少的铁元素。','1.png','1'),
+(2,'安全可靠','网络征集','李彤','2017.3.5','铁锅不会出现因为高温而爆裂的情况，对人身安全带来极大的保证。','1.png','2');
+
+--美食分类
+DROP TABLE IF EXISTS food_cate;
+CREATE TABLE food_cate
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  cName      VARCHAR(255) NOT NULL,
+  eName      VARCHAR(255) NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO food_cate (id, cName, eName) VALUES
+(1,'铁锅美食','Pan food')
+--美食详情
+DROP TABLE IF EXISTS food_detail;
+CREATE TABLE food_detail
+(
+  id  INT(12) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  sources VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  insertTime DATETIME(6) NOT NULL,
+  detail LONGTEXT NOT NULL,
+  thumb  VARCHAR(255) NOT NULL,
+  cate_id  INT(12) NOT NULL,
+  FOREIGN KEY (cate_id) REFERENCES food_cate(id)
+)DEFAULT CHARSET = utf8;
+
+--产品分类
+DROP TABLE IF EXISTS product_cate;
+CREATE TABLE product_cate
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  cName      VARCHAR(255) NOT NULL,
+  eName      VARCHAR(255) NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO product_cate (id, cName, eName) VALUES
+(1,'炒锅系列','Chinese pan SERIES'),
+(2,'煎锅系列','FRYING PAN SERIES'),
+(3,'烤锅系列','Baking pan series'),
+(4,'炖锅系列','Stew pan series'),
+(5,'老式铁锅','THE OLD IRON PAN'),
+(6,'珐琅铸铁锅','ENAMEL IRON PAN')
+
+--产品详情
+DROP TABLE IF EXISTS product_detail;
+CREATE TABLE product_detail
+(
+   id        INT(12)    NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   cName     VARCHAR(255) NOT NULL,
+   eName     VARCHAR(255) NOT NULL,
+   original_price VARCHAR(255) NOT NULL,
+   current_price VARCHAR(255) NOT NULL,
+   cn_price  VARCHAR(255) NOT NULL,
+   link     VARCHAR(255) NOT NULL,
+   thumb      VARCHAR(255) NOT NULL,
+   label     VARCHAR(255) NOT NULL,
+   cate_id  INT(12) NOT NULL,
+   detail LONGTEXT NOT NULL,
+   FOREIGN KEY (cate_id) REFERENCES product_cate(id)
+)DEFAULT CHARSET = utf8;
+
+--产品图片
+DROP TABLE IF EXISTS product_img;
+CREATE TABLE product_img
+(
+   id             INT(12)       NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   img            VARCHAR(255)  NOT NULL,
+   position       INT(12)       NOT NULL,
+   product_id     INT(12)       NOT NULL,
+   FOREIGN KEY  (product_id) REFERENCES product_detail(id)
+)DEFAULT CHARSET = utf8;
+
+--video
+DROP TABLE IF EXISTS video;
+CREATE TABLE video
+(
+  id         INT(12)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  url     VARCHAR(255) NOT NULL
+)DEFAULT CHARSET = utf8;
+INSERT INTO video (id, url) VALUES
+(1,'www.baidu.com')

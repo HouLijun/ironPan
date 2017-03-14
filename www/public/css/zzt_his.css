@@ -1,0 +1,108 @@
+.zzt_historybigbox{
+    width: 100%;
+    height: 740px;
+    margin-top:183px;
+}
+.zzt_historyfather{
+    width: 1200px;
+    height:100%;
+    margin: 0 auto;
+}
+.zzt_historytitlebox{
+    width: 427px;
+    height:90px;
+    margin: 0px auto;
+}
+.zzt_historytitle{
+    width: 192px;
+    height:33px;
+    margin: 0 auto;
+}
+.zzt_history{
+    font-size:14px;
+    text-align: center;
+    margin-top:14px;
+    color:#a0a0a0;
+}
+.zzt_historyline{
+    width:274px;
+    height:14px;
+    margin: 11px auto;
+}
+.zzt_historycenterbox{
+    width: 1188px;
+    height:546px;
+    margin: 104px auto;
+}
+.zzt_historycenterleftbox{
+    width:403px;
+    height:546px;
+    float: left;
+}
+.zzt_historycenterleft{
+    width:198px;
+    height:179px;
+    float:left;
+    margin-top: 8px;
+}
+.zzt_historycenterleft:nth-child(1){
+    width:400px;
+    height:352px;
+    float:left;
+    margin-top: 0px;
+}
+.zzt_historycenterleftbox{
+    width:403px;
+    height:546px;
+    float: left;
+}
+.zzt_historycenterleft:nth-child(3){
+    width:198px;
+    height:179px;
+    float:left;
+    margin-left:7px;
+    margin-top:8px;
+}
+.zzt_historycenterrightbox{
+    width: 735px;
+    height:537px;
+    float:right;
+}
+.zzt_historycenterright {
+    width: 100%;
+    height: 95px;
+    float:left;
+    margin-top:43px;
+}
+.zzt_historycenterrightbox{
+    width: 735px;
+    height:537px;
+    float:right;
+}
+.zzt_historycenterright:nth-child(1){
+    width: 100%;
+    height: 95px;
+    float:left;
+    margin-top:0px;
+}
+.zzt_spot{
+    width:12px;
+    height:12px;
+    background:#a02024;
+    border-radius:50%;
+    float:left;
+    margin-top:10px;
+}
+.zzt_righttitle{
+    margin-left:12px;
+    font-size:20px;
+}
+.zzt_eglsname{
+    color:#6f6f6f;
+    font-size:18px;
+}
+.zzt_chinese{
+    font-size:18px;
+    color:#6f6f6f;
+    margin-top:25px;
+}

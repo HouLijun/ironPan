@@ -1,0 +1,64 @@
+.zzt_headerbox{
+    width: 1200px;
+    padding:20px 0;
+    margin: 0 auto;
+    position: relative;
+}
+.zzt_headerbox:after{
+    content:"";
+    display: block;
+    width:100%;
+    height:0;
+    clear:both;
+}
+.zzt_logo{
+    float: left;
+}
+.zzt_logo img{
+    height:74px;
+}
+.zzt_headerright{
+    width:930px;
+    height:35px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto 0;
+}
+.zzt_header_sortbox{
+    width: 95px;
+    height:100%;
+    float:left;
+    margin-left:35px;
+    border:1px solid #fff;
+    box-sizing: border-box;
+    transition:all .4s ease;
+}
+.zzt_header_sor{
+    display: block;
+    width:87px;
+    height:29px;
+    float: left;
+    margin-left:3px;
+    margin-top: 2px;
+    text-align:center;
+    line-height:29px;
+    color:#000;
+    font-size: 18px;
+    transition:all .4s ease;
+}
+.zzt_header_sortbox:hover{
+    border:1px solid #a02024;
+}
+.zzt_header_sortbox:hover .zzt_header_sor{
+    background:#a02024;
+    color:#ffffff;
+}
+.nav_current{
+    border:1px solid #a02024;
+}
+.nav_current .zzt_header_sor{
+    background:#a02024;
+    color:#ffffff;
+}

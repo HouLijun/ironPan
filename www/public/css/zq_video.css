@@ -1,0 +1,65 @@
+@charset "UTF-8";
+#zq_video_box {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  overflow: hidden; }
+
+.zq_video_img {
+  width: 100%; }
+
+.zq_video_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); }
+
+/*视频 按钮 开始*/
+.zq_video_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  width: 100px;
+  height: 100px;
+  background: url("/public/images/zq_play.png");
+  background-size: cover;
+  cursor: pointer; }
+
+.zq_video_btn:hover {
+  background: url("/public/images/zq_pause.png");
+  background-size: cover; }
+
+/*视频 按钮 结束*/
+/*视频界面 开始*/
+.zq_video_bag {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 120px;
+  width: 600px;
+  height: 400px;
+  display: block; }
+
+.zq_video {
+  width: 600px;
+  height: 400px; }
+
+.zq_video_close {
+  position: absolute;
+  top: 18px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: url("/public/images/zq_close.jpg");
+  background-size: cover;
+  cursor: pointer;
+  z-index: 20; }
+
+/*视频界面 结束*/

@@ -1,0 +1,31 @@
+.ynn_all4 {
+  width: 920px;
+  padding-left: 70px;
+  float: right;
+}
+
+.ynn_all4 h1 {
+  font-size: 30px;
+}
+
+.ynn_all4 .ynn_resource {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ynn_all4 .ynn_resource p {
+  float: left;
+  margin-right: 15px;
+  font-size: 18px;
+  line-height: 3em;
+}
+
+.ynn_all4 .ynn_content {
+  width: 100%;
+}
+
+.ynn_all4 .ynn_content pre {
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
