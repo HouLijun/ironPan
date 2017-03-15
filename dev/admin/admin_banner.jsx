@@ -2,9 +2,65 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const common = require('./admin_common.jsx');
 
-import { Table, Input, Icon, Button, Popconfirm,Select } from 'antd';
+import { Table, Input, Icon, Button, Popconfirm,Select ,Upload,Modal} from 'antd';
 const Option = Select.Option;
-
+class PicturesWall extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            previewVisible: false,
+            previewImage: '',
+            fileList: [{
+                uid: -this.props.id,
+                name: this.props.url,
+                status: 'done',
+                url: this.props.url?`/public/images/${this.props.url}`:null,
+            }],
+        };
+        this.handleCancel=this.handleCancel.bind(this);
+        this.handlePreview=this.handlePreview.bind(this);
+        this.handleChange=this.handleChange.bind(this);
+    }
+    componentDidMount(){
+        if(!this.props.url){
+            this.setState({fileList:[]})
+        }
+    }
+    handleCancel(){this.setState({ previewVisible: false })};
+    handlePreview(file){
+        this.setState({
+            previewImage: file.url || file.thumbUrl,
+            previewVisible: true,
+        });
+    };
+    handleChange({ fileList }){this.setState({ fileList })}
+    render() {
+        const { previewVisible, previewImage, fileList } = this.state;
+        const uploadButton = (
+            <div>
+                <Icon type="plus" />
+                <div className="ant-upload-text">Upload</div>
+            </div>
+        );
+        return (
+            <div className="clearfix">
+                <Upload
+                    action="/admin/uploadBanner"
+                    listType="picture-card"
+                    fileList={fileList}
+                    onPreview={this.handlePreview}
+                    onChange={this.handleChange}
+                    data={{id:this.props.id}}
+                >
+                    {fileList.length >= 1 ? null : uploadButton}
+                </Upload>
+                <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+                    <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                </Modal>
+            </div>
+        );
+    }
+}
 class EditableCell extends React.Component {
     constructor(props){
         super(props);
@@ -61,14 +117,25 @@ class EditableCell extends React.Component {
         );
     }
 }
-
 class EditableTable extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            dataSource: [{
+                key: '',
+                url: '',
+                position: '0',
+                bgColor: '',
+            }],
+            updateId:0
+        };
         this.columns = [ {
             title: '图片',
             dataIndex: 'url',
-            width:"32%"
+            width:"32%",
+            render: (text, record, index) =>(
+                <PicturesWall id={this.state.dataSource[index].key} url={this.state.dataSource[index].url}/>
+            )
         }, {
             title: '展示位置',
             dataIndex: 'position',
@@ -109,16 +176,6 @@ class EditableTable extends React.Component {
                 );
             },
         }];
-
-        this.state = {
-            dataSource: [{
-                key: '',
-                url: '',
-                position: '0',
-                bgColor: '',
-            }],
-            updateId:0
-        };
         this.handleChange=this.handleChange.bind(this);
         this.changeState=this.changeState.bind(this);
         this.onCellChange=this.onCellChange.bind(this);

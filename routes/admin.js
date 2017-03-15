@@ -126,9 +126,12 @@ router.post('/product_update', (req, res) => {
 });
 /*更改图片*/
 router.post("/product_thumb",upload.single("file"),function(req,res){
+    var arr = req.file.originalname.split(".");
+    var suffix = arr[arr.length - 1];
+    var imgName=req.file.filename + "." + suffix;
     async.series([
         function(callback){
-            fs.createReadStream(req.file.path).pipe(fs.createWriteStream(path.resolve("./www/public/images/",req.file.originalname)));
+            fs.createReadStream(req.file.path).pipe(fs.createWriteStream(path.resolve("./www/public/images/",imgName)));
             callback(null)
         },
         function(callback){
@@ -136,7 +139,7 @@ router.post("/product_thumb",upload.single("file"),function(req,res){
             callback(null)
         }
     ],function(){
-        mysql.query("update product_detail set thumb=? where id=?",[req.file.originalname,req.body.id],(err,data)=>{
+        mysql.query("update product_detail set thumb=? where id=?",[imgNamereq.body.id],(err,data)=>{
             if(!err){
                 res.json("ok")
             }else{
@@ -225,23 +228,28 @@ router.post('/chBannerBg', (req, res)=> {
         }
     })
 });
-//上传图片
-router.post("/upload",upload.single("file"),(req,res)=>{
+router.post("/uploadBanner",upload.single("file"),(req,res)=>{
     var arr = req.file.originalname.split(".");
-    var suffix = arr[arr.length - 1]
-    var write = fs.createWriteStream('www/public/images/' + req.file.filename + "." + suffix);
+    var suffix = arr[arr.length - 1];
+    var imgName=req.file.filename + "." + suffix;
     async.series([
-        function (callback) {
-            fs.createReadStream(req.file.path).pipe(write);
-            callback(null);
+        function(callback){
+            fs.createReadStream(req.file.path).pipe(fs.createWriteStream(path.resolve("./www/public/images/",imgName)));
+            callback(null)
         },
-        function (callback) {
+        function(callback){
             fs.unlink(path.resolve(req.file.path));
-            callback(null);
+            callback(null)
         }
-    ], function () {
-        res.end('/public/images/' + req.file.filename + "." + suffix);
-    });
+    ],function(){
+        mysql.query("update banner set url=? where id=?",[imgName,req.body.id],(err,data)=>{
+            if(!err){
+                res.json(200)
+            }else{
+                res.json(err);
+            }
+        })
+    })
 })
 
 
