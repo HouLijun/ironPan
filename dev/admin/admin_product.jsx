@@ -252,7 +252,7 @@ class List extends React.Component {
         };
         var category=location.pathname.split("/")[2];
         return (
-            <Col span="12" key={1}>
+            <Col span="8" key={1}>
                 <Card bordered={false}>
                     <form action="" method="post">
                         <div className="inputName">
@@ -351,7 +351,7 @@ class Content extends React.Component {
                 <div className="zq_box">
                     <div className="zq_add" onClick={this.add}>
                         <a href={`/admin/product/${this.state.cate_id}`}>
-                            <Button>增加</Button>
+                            <button className="add">增加</button>
                         </a>
                     </div>
                     <div style={{overflow:"hidden"}}>
