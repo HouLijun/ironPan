@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "iconfont";
-  src: url("/public/fonts/iconfont.woff"); }
+  font-family: "iconfontCrumbs";
+  src: url("/public/fonts/iconfontCrumbs.woff"); }
 
 .container {
   width: 1200px;
@@ -118,10 +118,10 @@
     line-height: 14px;
     transition: color .5s ease; }
     .crumbs li .icon_crumbs {
-      font-family: "iconfont";
+      font-family: "iconfontCrumbs";
       margin-right: 2px; }
     .crumbs li .arrow {
-      font-family: "iconfont";
+      font-family: "iconfontCrumbs";
       padding: 0 1px; }
     .crumbs li a {
       color: inherit; }

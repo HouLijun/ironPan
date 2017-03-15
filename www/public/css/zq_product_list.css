@@ -1,4 +1,16 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.woff');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
 .zq_product_list {
   float: right;
   width: 882px;
