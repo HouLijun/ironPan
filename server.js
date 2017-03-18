@@ -39,7 +39,7 @@ app.use('/admin', function (req,res,next) {
     }
 });
 app.use('/admin',adminRouter);
-app.listen(3000);
+app.listen(8001);
 process.on('uncaughtException',function(exception){
     console.log("error");
 });
